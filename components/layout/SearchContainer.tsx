@@ -1,18 +1,15 @@
 import { useState } from "react";
-import {
-  APIErrorToast,
-  fetchBULEgon,
-  fetchEgonData,
-  HTTPError,
-} from "../../api";
+
 import { useSearchContext } from "../../context/SearchContext";
-import { EgonData } from "../../interfaces/egon";
 import { ActionTypes } from "../../reducers/SearchReducer";
-import Separator from "../layout/Separator";
-import FormButton from "../ui/FormButton";
-import Spinner from "../ui/Spinner";
-import InfoDisplay from "./InfoDisplay";
+import { APIErrorToast, fetchEgonData, HTTPError } from "../../api";
+import { EgonData } from "../../interfaces/egon";
+
 import SearchField from "./SearchField";
+import InfoDisplay from "./InfoDisplay";
+import FormButton from "../ui/FormButton";
+import Separator from "../layout/Separator";
+import Spinner from "../ui/Spinner";
 
 const SearchContainer = () => {
   const { state, dispatch } = useSearchContext();
@@ -26,32 +23,21 @@ const SearchContainer = () => {
     dispatch({ type: ActionTypes.RESET });
   };
 
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
 
-    if (!state.egon) {
+    if (!!!state.egon) {
       return;
     }
     setInfoLoading(true);
     setEgonData(null);
-
-    try {
-      const egonData = await fetchEgonData(state.egon);
-
-      try {
-        // Fetch year from BUL API via EGON.
-        const { anno_intervento_a: bulYear } = await fetchBULEgon(state.egon);
-        setEgonData({ ...egonData, bulYear });
-      } catch (e) {
-        setEgonData(egonData);
+    fetchEgonData(state.egon)
+      .then((data) => setEgonData(data))
+      .catch((e) => {
         console.error(e);
-      }
-    } catch (e) {
-      console.error(e);
-      APIErrorToast(e as HTTPError);
-    } finally {
-      setInfoLoading(false);
-    }
+        APIErrorToast(e as HTTPError);
+      })
+      .finally(() => setInfoLoading(false));
   };
 
   return (
@@ -69,14 +55,14 @@ const SearchContainer = () => {
         <SearchField
           title="Provincia"
           context="provinces"
-          disabled={!state.region}
+          disabled={!!!state.region}
           menuPlacement="bottom"
           showOptionsOnClick
         />
         <SearchField
           title="Città"
           context="cities"
-          disabled={!state.region || !state.province}
+          disabled={!!!state.region || !!!state.province}
           menuPlacement="bottom"
           showOptionsOnClick
         />
@@ -84,14 +70,17 @@ const SearchContainer = () => {
           <SearchField
             title="Via"
             context="streets"
-            disabled={!state.region || !state.province || !state.city}
+            disabled={!!!state.region || !!!state.province || !!!state.city}
             menuPlacement="top"
           />
           <SearchField
             title="Civico"
             context="numbers"
             disabled={
-              !state.region || !state.province || !state.city || !state.street
+              !!!state.region ||
+              !!!state.province ||
+              !!!state.city ||
+              !!!state.street
             }
             menuPlacement="top"
             showOptionsOnClick
@@ -100,7 +89,7 @@ const SearchContainer = () => {
 
         <div className="flex justify-center items-center gap-5">
           <FormButton
-            disabled={!state.egon}
+            disabled={!!!state.egon}
             className="bg-yellow-400 text-blue-900"
             type="submit"
           >
@@ -119,7 +108,7 @@ const SearchContainer = () => {
           )}
         </div>
       </form>
-      {infoLoading && !egonData && (
+      {infoLoading && !!!egonData && (
         <>
           <Separator />
           <div className="flex items-center justify-center w-80">

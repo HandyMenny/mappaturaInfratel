@@ -1,17 +1,19 @@
 import dynamic from "next/dynamic";
-import { useCallback, useEffect, useState } from "react";
-import {
-  APIErrorToast,
-  fetchCities,
-  fetchNumbers,
-  fetchProvinces,
-  fetchRegions,
-  fetchStreets,
-  HTTPError,
-} from "../../api";
+import { useEffect, useState, useCallback } from "react";
+const Select = dynamic(() => import("react-select"), { ssr: false });
+
 import { useSearchContext } from "../../context/SearchContext";
 import { ActionTypes } from "../../reducers/SearchReducer";
-const Select = dynamic(() => import("react-select"), { ssr: false });
+
+import {
+  fetchRegions,
+  fetchProvinces,
+  fetchCities,
+  fetchStreets,
+  fetchNumbers,
+  APIErrorToast,
+  HTTPError,
+} from "../../api";
 
 type Props = {
   context: "regions" | "provinces" | "cities" | "streets" | "numbers";
@@ -143,7 +145,7 @@ const SearchField = ({
   };
 
   const filterFetchedData = useCallback((): SelectOption[] => {
-    if (!showOptionsOnClick && !inputValue) {
+    if (!showOptionsOnClick && !!!inputValue) {
       return [
         {
           label: "Digita un nome",

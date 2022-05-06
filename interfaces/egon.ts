@@ -8,5 +8,4 @@ export interface EgonData {
   color: string;
   peakSpeed: number;
   below300Mbps: number;
-  bulYear?: number;
 }

@@ -24,8 +24,6 @@ export const APIErrorToast = ({ status }: HTTPError) => {
   }
 };
 
-// Our API.
-
 const fetchAPI = async (query: string) => {
   const res = await fetch(`${API_URL}${query}`);
 
@@ -59,16 +57,3 @@ export const fetchNumbers = (province: string, city: string, street: string) =>
   );
 
 export const fetchEgonData = (egon: string) => memoFetchAPI(`/egon?id=${egon}`);
-
-// BUL API.
-export const fetchBULEgon = async (egon: string) => {
-  const res = await fetch(
-    `https://bandaultralarga.italia.it/wp-json/bul/v1/address-info/${egon}`
-  );
-
-  if (!res.ok) {
-    throw new HTTPError(res.statusText, res.status);
-  }
-
-  return res.json();
-};
