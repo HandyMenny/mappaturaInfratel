@@ -4,25 +4,23 @@ const Footer = () => {
   return (
     <footer className="flex flex-col items-center justify-center w-full bg-indigo-900 py-2">
       <p>
-        Creato da{" "}
+        Basato su {" "}
+        <ExternalLink
+          href="https://theedoran.github.io/mappatura2021"
+          text="Mappatura Infratel 2021"
+          className="text-white !text-base italic font-semibold hover:no-underline"
+        />{" "}  di{" "}
         <ExternalLink
           href="https://edoardo.ranghieri.com"
           text="TheEdoRan"
           className="text-white !text-base font-semibold hover:no-underline"
         />{" "}
-        con ❤️
       </p>
       <div className="flex items-center justify-center gap-4">
         <p>
           <ExternalLink
-            href="https://github.com/theedoran/mappatura2021"
+            href="https://github.com/HandyMenny/mappaturaInfratel"
             text="Codice Sorgente"
-          />
-        </p>
-        <p>
-          <ExternalLink
-            href="https://forum.fibra.click/d/22321-esiti-mappatura-infratel-2021"
-            text="Informazioni"
           />
         </p>
       </div>
