@@ -5,7 +5,7 @@ import { Toaster } from "react-hot-toast";
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
-    <div className="flex flex-col w-full min-h-screen bg-indigo-800 text-indigo-100">
+    <div className="flex flex-col w-full min-h-screen bg-indigo-800 text-indigo-50">
       <Toaster
         position="top-center"
         toastOptions={{
