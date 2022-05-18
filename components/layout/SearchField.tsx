@@ -145,7 +145,11 @@ const SearchField = ({
   };
 
   const filterFetchedData = useCallback((): SelectOption[] => {
-    if (!showOptionsOnClick && !!!inputValue) {
+    if (showOptionsOnClick) {
+      return fetchedData;
+    }
+
+    if (!!!inputValue) {
       return [
         {
           label: "Digita un nome",
@@ -157,16 +161,10 @@ const SearchField = ({
 
     let data = fetchedData.filter(({ label }) =>
       label?.toLowerCase().includes(inputValue.toLowerCase())
-    );
-
-    if (context !== "numbers" && !!inputValue) {
-      data = data
-        .sort(
-          ({ label: aLabel }, { label: bLabel }) =>
-            aLabel!.length - bLabel!.length || aLabel!.localeCompare(bLabel!)
-        )
-        .slice(0, 100);
-    }
+    ).sort(
+      ({label: aLabel}, {label: bLabel}) =>
+        aLabel!.length - bLabel!.length || aLabel!.localeCompare(bLabel!)
+    ).slice(0, 100);
     return data;
   }, [fetchedData, showOptionsOnClick, inputValue, context]);
 
