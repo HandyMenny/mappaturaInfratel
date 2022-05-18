@@ -161,9 +161,7 @@ const SearchField = ({
 
     let data = fetchedData.filter(({ label }) =>
       label?.toLowerCase().includes(inputValue.toLowerCase())
-    ).sort(
-      ({label: aLabel}, {label: bLabel}) =>
-        aLabel!.length - bLabel!.length || aLabel!.localeCompare(bLabel!)
+    ).sort(({label: aLabel}, {label: bLabel}) => aLabel!.localeCompare(bLabel!)
     ).slice(0, 100);
     return data;
   }, [fetchedData, showOptionsOnClick, inputValue, context]);
