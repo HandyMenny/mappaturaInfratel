@@ -29,6 +29,7 @@ interface SelectOption {
   value?: string;
   egon?: string;
   isDisabled?: boolean;
+  point: number;
 }
 
 const makeSelectOptions = (
@@ -144,6 +145,19 @@ const SearchField = ({
     contextFn({ get: false, payload, egon });
   };
 
+  const filterText = ({ label }, filter) => {
+    filter = filter.toLowerCase().trim().split(/[\s,\-+]+/)
+    label = label.toLowerCase().trim();
+    const regexPattern = filter.join("|");
+    return label.match(new RegExp(regexPattern, 'g'))?.join().length || 0;
+  }
+  const filterText2 = ({ label }, filter) => {
+    filter = filter.toLowerCase().trim().split(/[\s,\-+]+/)
+    label = label.toLowerCase().trim();
+    const regexPattern = filter.join("|");
+    return label.match(new RegExp(regexPattern, 'g')) || 0;
+  }
+
   const filterFetchedData = useCallback((): SelectOption[] => {
     if (!showOptionsOnClick && !!!inputValue) {
       return [
@@ -154,20 +168,18 @@ const SearchField = ({
         },
       ];
     }
-
-    let data = fetchedData.filter(({ label }) =>
-      label?.toLowerCase().includes(inputValue.toLowerCase())
-    );
-
-    if (context !== "numbers" && !!inputValue) {
-      data = data
-        .sort(
-          ({ label: aLabel }, { label: bLabel }) =>
-            aLabel!.length - bLabel!.length || aLabel!.localeCompare(bLabel!)
-        )
-        .slice(0, 100);
+    if (context !== "streets") {
+      return fetchedData;
+      let data = fetchedData;
+      data.forEach(it => {
+        it.point = filterText(it, inputValue)
+      });
+      data = data.filter(({point}) => point !== 0).sort(
+        ({label: aLabel, point: aSearch}, {label: bLabel, point: bSearch}) =>
+          bSearch - aSearch || aLabel!.localeCompare(bLabel!) || aLabel!.length - bLabel!.length
+      ).slice(0, 100);
+      return data;
     }
-    return data;
   }, [fetchedData, showOptionsOnClick, inputValue, context]);
 
   useEffect(() => {
@@ -221,6 +233,7 @@ const SearchField = ({
         placeholder={`${
           showOptionsOnClick ? "Seleziona" : "Cerca"
         } ${title.toLowerCase()}`}
+        filterOption={filterText2}
       />
     </div>
   );
