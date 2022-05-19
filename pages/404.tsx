@@ -6,7 +6,7 @@ const Custom404 = () => {
 
   useEffect(() => {
     const index =
-      process.env.NODE_ENV === "production" ? "/mappatura2021/" : "/";
+      process.env.NODE_ENV === "production" ? "/mappaturaInfratel/" : "/";
     replace(index);
   }, [replace]);
 
