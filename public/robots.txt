@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://theedoran.github.io/mappatura2021/sitemap.xml
+Sitemap: https://handymenny.github.io/mappaturaInfratel/sitemap.xml
