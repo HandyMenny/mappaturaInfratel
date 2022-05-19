@@ -164,7 +164,7 @@ const SearchField = ({
     ).sort(({label: aLabel}, {label: bLabel}) => aLabel!.localeCompare(bLabel!)
     ).slice(0, 100);
     return data;
-  }, [fetchedData, showOptionsOnClick, inputValue, context]);
+  }, [fetchedData, showOptionsOnClick, inputValue]);
 
   useEffect(() => {
     fetchOptionsByContext();
@@ -175,8 +175,6 @@ const SearchField = ({
       <h3 className="text-indigo-200 text-xl mb-3">{title}</h3>
       <Select
         isDisabled={disabled}
-        cacheOptions
-        defaultOptions
         options={filterFetchedData()}
         onInputChange={(value) => setInputValue(value)}
         menuPlacement={menuPlacement}

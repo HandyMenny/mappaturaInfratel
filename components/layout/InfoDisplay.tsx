@@ -77,7 +77,7 @@ const SubSectionTitle = ({
   );
 };
 
-const SectionContainer = ({ children, open }: { children: React.ReactNode, open: boolean }) => {
+const SectionContainer = ({ children, open }: { children: React.ReactNode, open?: boolean }) => {
   return <details className="flex flex-col items-center" open={open}>{children}</details>;
 };
 
@@ -202,7 +202,7 @@ const InfoDisplay = ({ data }: Props) => {
     )
   }
 
-  let italia1Giga = (<SectionContainer open="true">
+  let italia1Giga = (<SectionContainer open={true}>
     <SectionTitle text="Piano Italia 1 Giga" />
     <SubSectionTitle text="Incluso nel bando">
       <div>
