@@ -20,7 +20,7 @@ export default function Home() {
       </Head>
       <main className="flex flex-1 flex-col p-5 justify-center items-center w-full">
         <h1 className="text-2xl sm:text-4xl font-medium mb-1 drop-shadow-lg">
-          Mappatura Infratel 2017-2021
+          Mappatura Infratel 2017-2021 <sup className="text-blue-300">BETA</sup>
         </h1>
         <h2 className="sm:text-lg italic font-light text-blue-300 drop-shadow-lg mb-10">
           Copertura prevista entro il 2026 in Italia
