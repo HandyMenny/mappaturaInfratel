@@ -102,7 +102,7 @@ const InfoDisplay = ({ data }: Props) => {
           {data.color != null && (
           <SubSectionTitle text="Colore del civico">
             <div className="text-center">
-              <div className={`text-3xl sm:text-4xl py-3 px-4 mx-8 border-2 ${
+              <div className={`text-3xl sm:text-4xl py-3 px-4 m-auto w-[calc(100%_-_2.9rem)] border-2 ${
                 colorMapping[data.color].className
               }`}>
                 {colorMapping[data.color].text.toUpperCase()}
@@ -137,21 +137,21 @@ const InfoDisplay = ({ data }: Props) => {
           <SectionTitle text="Consultazione 2020"/>
           <SubSectionTitle text="Copertura 2019">
             <div
-                className={`text-3xl sm:text-4xl py-3 px-4 mx-8 border-2 ${
+                className={`text-2xl sm:text-3xl py-3 px-4 m-auto w-[calc(100%_-_2.9rem)] border-2 ${
                     colorMapping[data.class19[0] || ''].className
                 }`}
             >
-            {colorMapping[data.class19[0] || ''].text.toUpperCase()}{data.class19[1] == 'v' ? ' VHCN' : ' NO VHCN'}{
+            {colorMapping[data.class19[0] || ''].text.toUpperCase()}{data.class19[1] == 'v' ? ' VHCN' : data.class19[1] == 'n' ? ' NGA' : ''}{
               data.class19[2] == 'r' ? ' RAME' : data.class19[2] == 'w' ? ' FWA' : data.class19[2] == 'f' ? ' FTTH' : ''}
           </div>
           </SubSectionTitle>
           <SubSectionTitle text="Copertura 2022">
             <div
-                className={`text-3xl sm:text-4xl py-3 px-4 mx-8 border-2 ${
+                className={`text-2xl sm:text-3xl py-3 px-4 m-auto w-[calc(100%_-_2.9rem)] border-2 ${
                     colorMapping[data.class22[0] || ''].className
                 }`}
             >
-              {colorMapping[data.class22[0] || ''].text.toUpperCase()}{data.class22[1] == 'v' ? ' VHCN' : ' NO VHCN'}{
+              {colorMapping[data.class22[0] || ''].text.toUpperCase()}{data.class22[1] == 'v' ? ' VHCN' : data.class22[1] == 'n' ? ' NGA' : ''}{
               data.class22[2] == 'r' ? ' RAME' : data.class22[2] == 'w' ? ' FWA' : data.class22[2] == 'f' ? ' FTTH' : ''}
             </div>
           </SubSectionTitle>
