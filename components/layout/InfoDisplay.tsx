@@ -141,7 +141,7 @@ const InfoDisplay = ({ data }: Props) => {
                     colorMapping[data.class19[0] || ''].className
                 }`}
             >
-            {colorMapping[data.class19[0] || ''].text.toUpperCase()}{data.class19[1] == 'v' ? ' VHCN' : data.class19[1] == 'n' ? ' NGA' : ''}{
+            {colorMapping[data.class19[0] || ''].text.toUpperCase()}{data.class19[1] == 'v' ? ' VHCN' : (data.class19[1] == 'n' || data.class19[0] == 'n') ? ' NGA' : ''}{
               data.class19[2] == 'r' ? ' RAME' : data.class19[2] == 'w' ? ' FWA' : data.class19[2] == 'f' ? ' FTTH' : ''}
           </div>
           </SubSectionTitle>
@@ -151,7 +151,7 @@ const InfoDisplay = ({ data }: Props) => {
                     colorMapping[data.class22[0] || ''].className
                 }`}
             >
-              {colorMapping[data.class22[0] || ''].text.toUpperCase()}{data.class22[1] == 'v' ? ' VHCN' : data.class22[1] == 'n' ? ' NGA' : ''}{
+              {colorMapping[data.class22[0] || ''].text.toUpperCase()}{data.class22[1] == 'v' ? ' VHCN' : (data.class22[1] == 'n' || data.class22[0] == 'n') ? ' NGA' : ''}{
               data.class22[2] == 'r' ? ' RAME' : data.class22[2] == 'w' ? ' FWA' : data.class22[2] == 'f' ? ' FTTH' : ''}
             </div>
           </SubSectionTitle>
