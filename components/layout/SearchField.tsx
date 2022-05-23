@@ -145,7 +145,7 @@ const SearchField = ({
   };
 
   const filterFetchedData = useCallback((): SelectOption[] => {
-    if (showOptionsOnClick) {
+    if (showOptionsOnClick || fetchedData.length < 30) {
       return fetchedData;
     }
 
