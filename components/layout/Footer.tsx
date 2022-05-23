@@ -1,4 +1,7 @@
 import ExternalLink from "../utils/ExternalLink";
+import React from "react";
+import InternalLink from "../utils/InternalLink";
+import Faq from "./Faq";
 
 const Footer = () => {
   return (
@@ -17,6 +20,7 @@ const Footer = () => {
         />{" "}
       </p>
       <div className="flex items-center justify-center gap-4">
+          <Faq/>
         <p>
           <ExternalLink
             href="https://github.com/HandyMenny/mappaturaInfratel"
