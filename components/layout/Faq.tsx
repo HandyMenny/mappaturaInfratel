@@ -59,7 +59,7 @@ const Modal = () => {
                 Se il tuo comune, la tua via o il tuo civico sono cambiati negli ultimi cinque anni, prova a cercare sia con i dati vecchi che con i nuovi.
               </Question>
               <Question text="Perché alcuni civici sono duplicati?">
-                Perché nei dati pubblicati da Infratel sono presenti con la stessa denominazione ma id diverso.
+                Perché nei dati pubblicati da Infratel sono presenti con la stessa denominazione ma identificativo diverso.
                 In caso di civici duplicati l&apos;esponente è utilizzato per numerarli.
               </Question>
               <Question text="Cosa rappresenta il colore del civico?">
@@ -77,17 +77,17 @@ const Modal = () => {
                 <br />Dalla consultazione 2020 in poi alla definizione precedente è stata aggiunta una specifica per le reti FWA, sono considerate VHCN le reti FWA che sono in grado di fornire, ad un singolo utente in tipiche condizioni di picco di traffico, almeno 1 Gbps in download, almeno 200 Mbps in upload e latenza inferiore o uguale a 10 millisecondi al primo peering point.
               </Question>
               <Question text="Perché nella consultazione 2021 non è indicato il colore del mio civico?">
-                La consultazione 2021 è divisa in due parti, una per i civici che nelle consultazioni del 2015-17 erano risultati grigi o neri, un&apos;altra per quelli che erano risultati bianchi ma esclusi dal piano BUL. Nei risultati di quest&apos;ultima non è indicato il colore del civico.
+                La consultazione 2021 è divisa in due parti, una per gli indirizzi che nelle consultazioni del 2015-17 erano risultati grigi o neri, un&apos;altra per quelli che erano risultati bianchi ma esclusi dal piano BUL. Nei risultati di quest&apos;ultima non è indicato il colore del civico.
               </Question>
               <Question text="Cos&apos;è la velocità nelle ore di punta?">
-                La velocità nelle ore di punta (<i>velocità di picco</i> nei documenti Infratel) è una stima della banda disponibile per un singolo utente quando tutti gli altri utenti (che condividono la stessa infrastruttura) stanno utilizzando attivamente la loro connessione, ad esempio per guardare una partita di calcio in streaming.
+                La velocità nelle ore di punta (<i>velocità di picco</i> nei documenti Infratel) è una stima della banda disponibile per un singolo utente quando gli altri (con cui condivide l&apos;infrastruttura) stanno utilizzando attivamente la loro connessione, ad esempio per guardare una partita di calcio in streaming.
                 <br />Nei documenti Infratel c&apos;è una formula di riferimento per calcolare tale valore.
               </Question>
               <Question text="Perché la velocità nelle ore di punta è più alta di quella massima?">
                 Innanzitutto, nei risultati della consultazione 2021 aree grigie e nere la velocità nelle ore di punta aveva più intervalli di quella massima, quindi non è anomalo avere velocità massima maggiore o uguale a 300 Mbps e velocità nelle ore di punta maggiore o uguale a 1000 Mbps.
                 <br />Per gli altri casi è possibile che l&apos;operatore dichiarante abbia tenuto conto dell&apos;offerta commerciale nel dichiarare la velocità massima. Ad esempio considerando un albero GPON 1:64 con taglio massimo commerciale di 100 Mbps in download e 20 Mbps in upload, 100 Mbps potrebbe essere la velocità massima e 1900 Mbps quella nelle ore di punta.
               </Question>
-              <Question text="Perché nella consultazione 2020 il colore è nero e in quella 2021 è grigio?">
+              <Question text="Perché nella consultazione 2020 il colore del mio indirizzo è nero e in quella 2021 è grigio?">
                 Probabilmente perché i risultati per civico della consultazione 2021 includono solo la copertura cablata, cioè sono state escluse da quei risultati le FWA.
               </Question>
               <Question text="Come si interpretano i risultati della consultazione 2020?">
@@ -96,9 +96,9 @@ const Modal = () => {
                 <br />La prima parte del risultato indica il colore del civico, la seconda parte indica se la rete NGA di categoria massima è VHCN o meno, la terza parte indica l&apos;architettura della rete di categoria massima (in caso di ex aequo FTTH ha priorità su FWA).
               </Question>
               <Question text="Perché i risultati della consultazione 2020 per la provincia di Rimini sono incompleti?">
-                Perché gli identificativi di quei civici avevano al più 4 cifre significative su 15...
+                Perché gli identificativi di quei indirizzi avevano al più 4 cifre significative su 15 (sono in notazione esponenziale)
               </Question>
-              <Question text="Perché nei risultati della consultazione 2019 vedo NGA-VHCN e su questo sito ≥ 100Mbps?">
+              <Question text="Perché i risultati della consultazione 2019 dicono NGA-VHCN e questo sito ≥ 100Mbps?">
                 Ho deciso di applicare una semplificazione per rendere i risultati della consultazione 2019 più simili a quelli delle altre consultazioni. La copertura NGA è diventata velocità maggiore o uguale a 30 Mbps, copertura NGA-VHCN è diventata velocità maggiore o uguale a 100 Mbps.
               </Question>
               <Question text="Cosa significa non censito?">
@@ -113,18 +113,18 @@ const Modal = () => {
               <Question text="Le velocità si riferiscono al download, all&apos;upload o entrambi?">
                 Le velocità riportate nei risultati di questo sito si riferiscono esclusivamente al download.
               </Question>
-              <Question text="Cos&apos;è il piano Italia 1 Giga?">
-                Il piano Italia 1 Giga, precedentemente noto come piano aree grigie, è un piano per portare una connessione VHCN, tramite finanziamento misto pubblico-privato, ai civici che nel 2026 non ne avranno una (da operatori privati) e che non sono stati oggetto di interventi diretti o a concessione nell&apos;ambito del piano BUL.
+              <Question text="Cos&apos;è il Piano Italia 1 Giga?">
+                Il Piano Italia 1 Giga, precedentemente noto come piano aree grigie, è un piano per portare una connessione VHCN, tramite finanziamento misto pubblico-privato, ai civici che nel 2026 non ne avranno una (da operatori privati) e che non sono stati oggetto di interventi diretti o a concessione nell&apos;ambito del piano BUL.
               </Question>
               <Question text="Come fai a conoscere i vincitori del Piano Italia 1 Giga?">
                 La fonte è questo articolo del CorCom: <ExternalLink className="text-base" href="https://www.corrierecomunicazioni.it/telco/banda-ultralarga/banda-ultralarga-open-fiber-batte-tim-nella-gara-aree-grigie/">Banda ultralarga, Open Fiber batte Tim nella gara aree grigie</ExternalLink>.
               </Question>
               <Question text="Cosa significa vincitore non ancora noto?">
-                Che il corrispondente lotto del piano Italia 1 giga non è stato ancora assegnato o non ne si conosce il vincitore.
+                Che il corrispondente lotto del Piano Italia 1 Giga non è stato ancora assegnato o non ne si conosce il vincitore.
               </Question>
               <Question text="I risultati di questo sito sono affidabili?">
                 Non sono più affidabili dei dati su cui si basa.
-                <br />Considerando che le consultazioni sono soggette ad errori di vario genere io le interpreterei come delle promesse che ahimè possono essere disattese. Discorso analogo per il Piano Italia 1 Giga, entro certi limiti e a determinate condizioni possono essere aggiunti o rimossi civici dal piano.
+                <br />Considerando che le consultazioni sono soggette ad errori di vario genere io le interpreterei come delle promesse che ahimè possono essere disattese. Discorso analogo per il Piano Italia 1 Giga, entro certi limiti e a determinate condizioni possono essere aggiunti o rimossi indirizzi dal piano.
               </Question>
               <Question text="Dove trovo i dati su cui si basa questo sito?">
                 In questa repo su GitHub: <ExternalLink className="text-base" href="https://github.com/HandyMenny/database-Infratel">Database Infratel</ExternalLink>.
