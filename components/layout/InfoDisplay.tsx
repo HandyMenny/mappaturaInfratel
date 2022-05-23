@@ -78,7 +78,7 @@ const SubSectionTitle = ({
 };
 
 const SectionContainer = ({ children, open }: { children: React.ReactNode, open?: boolean }) => {
-  return <details className="flex flex-col items-center" open={open}>{children}</details>;
+  return <details className="flex flex-col items-center cursor-pointer" open={open}>{children}</details>;
 };
 
 const InfoDisplay = ({ data }: Props) => {
