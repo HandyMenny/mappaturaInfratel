@@ -228,7 +228,7 @@ const InfoDisplay = ({ data }: Props) => {
       {consultazione2017}
       <div className="flex flex-col items-center justify-center w-full">
         <p>
-          Dubbi sui risultati? <Faq buttonClassName = "font-semibold !text-base !text-indigo-50" buttonText="Dai un'occhiata alle FAQ" /> o alla  <ExternalLink
+          Dubbi? <Faq buttonClassName = "font-semibold !text-base !text-indigo-50" buttonText="Dai un'occhiata alle FAQ" /> o alla  <ExternalLink
           href="https://fibra.click"
           text="wiki di FibraClick"
           className="font-semibold !text-base !text-indigo-50"
