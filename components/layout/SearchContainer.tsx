@@ -10,6 +10,8 @@ import InfoDisplay from "./InfoDisplay";
 import FormButton from "../ui/FormButton";
 import Separator from "../layout/Separator";
 import Spinner from "../ui/Spinner";
+import ExternalLink from "../utils/ExternalLink";
+import Faq from "./Faq";
 
 const SearchContainer = () => {
   const { state, dispatch } = useSearchContext();
@@ -106,6 +108,11 @@ const SearchContainer = () => {
               Pulisci i campi
             </FormButton>
           )}
+        </div>
+        <div className="flex flex-col items-center justify-center w-full">
+          <p>
+           Non trovi il tuo indirizzo? <Faq buttonClassName = "font-semibold !text-base text-white" buttonText="Guarda nelle FAQ" />
+          </p>
         </div>
       </form>
       {infoLoading && !!!egonData && (

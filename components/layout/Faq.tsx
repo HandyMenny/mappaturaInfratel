@@ -21,15 +21,22 @@ const Question =
   );
 };
 
-const Modal = () => {
+const Modal =
+({
+   buttonClassName,
+   buttonText
+}: {
+  buttonClassName?: string,
+  buttonText: string,
+}) => {
   const [showModal, setShowModal] = React.useState(false);
   return (
     <>
       <button
-        className={`text-sm font-light text-gray-300 hover:underline`}
+        className={`text-sm font-light text-gray-300 hover:underline ${buttonClassName}`}
         type="button"
         onClick={() => setShowModal(true)}>
-        FAQ
+        {buttonText}
       </button>
       {showModal ? (
         <div
