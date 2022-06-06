@@ -11,12 +11,12 @@ const Footer = () => {
         <ExternalLink
           href="https://theedoran.github.io/mappatura2021"
           text="Mappatura Infratel 2021"
-          className="text-white !text-base italic font-semibold"
+          className="!text-indigo-50 !text-base italic font-semibold"
         />{" "}  di{" "}
         <ExternalLink
           href="https://edoardo.ranghieri.com"
           text="TheEdoRan"
-          className="text-white !text-base font-semibold"
+          className="!text-indigo-50 !text-base font-semibold"
         />{" "}
       </p>
       <div className="flex items-center justify-center gap-4">

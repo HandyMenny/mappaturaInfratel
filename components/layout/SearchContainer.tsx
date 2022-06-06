@@ -111,7 +111,7 @@ const SearchContainer = () => {
         </div>
         <div className="flex flex-col items-center justify-center w-full">
           <p>
-           Non trovi il tuo indirizzo? <Faq buttonClassName = "font-semibold !text-base text-white" buttonText="Guarda nelle FAQ" />
+           Non trovi il tuo indirizzo? <Faq buttonClassName = "font-semibold !text-base !text-indigo-50" buttonText="Guarda nelle FAQ" />
           </p>
         </div>
       </form>
