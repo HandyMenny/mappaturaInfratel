@@ -5,7 +5,7 @@ import Faq from "./Faq";
 
 const Footer = () => {
   return (
-    <footer className="flex flex-col items-center justify-center w-full bg-indigo-900 py-2">
+    <footer className="text-center w-full bg-indigo-900 p-2">
       <p>
         Basato su {" "}
         <ExternalLink
