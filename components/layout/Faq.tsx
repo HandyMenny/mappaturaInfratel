@@ -100,7 +100,11 @@ const Modal =
               </Question>
               <Question text="Cosa significa non censito?">
                 Che quell&apos;indirizzo non era presente nei risultati per civico di quella consultazione.
-                <br />Gli indirizzi di Calabria, Puglia e Sardegna che risultano solo nella consultazione 2017, sono molto probabilmente indirizzi dichiarati bianchi nel 2015-17 ed oggetto di intervento pubblico diretto o a concessione nell&apos;ambito del piano BUL.
+              </Question>
+              <Question text="Perché il mio indirizzo è non censito in quasi tutte le consultazioni?">
+                Gli indirizzi di Calabria, Puglia e Sardegna che risultano solo nella consultazione 2017, sono molto probabilmente indirizzi dichiarati bianchi nel 2015-17 ed oggetto di intervento pubblico diretto o a concessione nell&apos;ambito del piano BUL.
+                <br />Gli indirizzi di Calabria, Puglia e Sardegna che risultano esclusivamente nella consultazione 2017 e in quella 2021, sono molto probabilmente indirizzi dichiarati bianchi nel 2015-17 ma esclusi da interventi pubblici a concessione o diretti del Piano BUL.
+                <br />Gli indirizzi che figurano solo nella consultazione 2021 sono molto probabilmente indirizzi che non esistevano o erano dichiarati bianchi nel 2015-17 e esclusi da interventi pubblici a concessione o diretti del Piano BUL.
               </Question>
               <Question text="Cosa rappresenta il colore del civico?">
                 Il colore del civico è un modo per indicare quanto è redditizio per gli operatori privati quel civico.
