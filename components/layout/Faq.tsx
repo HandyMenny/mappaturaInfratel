@@ -40,7 +40,7 @@ const Modal =
       </button>
       {showModal ? (
         <div
-          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 outline-none focus:outline-none"
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/30 outline-none focus:outline-none text-left"
           onClick={() => setShowModal(false)}
         >
           <div
