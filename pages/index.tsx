@@ -22,7 +22,7 @@ export default function Home() {
         <h1 className="text-2xl sm:text-4xl font-medium mb-1 drop-shadow-lg">
           Mappatura Infratel 2017-2021
         </h1>
-        <h2 className="sm:text-lg italic font-light text-blue-300 drop-shadow-lg mb-10">
+        <h2 className="sm:text-lg italic font-light text-blue-300 drop-shadow-lg mb-7">
           Copertura prevista entro il 2026 in Italia
         </h2>
         <SearchContextProvider>
