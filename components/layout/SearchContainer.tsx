@@ -109,9 +109,9 @@ const SearchContainer = () => {
             </FormButton>
           )}
         </div>
-        <div className="flex flex-col items-center justify-center w-full">
+        <div className="text-center w-full">
           <p>
-           Non trovi il tuo indirizzo? <Faq buttonClassName = "font-semibold !text-base !text-indigo-50" buttonText="Guarda nelle FAQ" />
+            Non trovi il tuo indirizzo? Probabilmente fa parte del <ExternalLink  className = "font-semibold !text-base !text-indigo-50" text = "Piano Aree Bianche" href = "https://fibra.click/piano-aree-bianche/"/>, per ulteriori informazioni <Faq buttonClassName = "font-semibold !text-base !text-indigo-50" buttonText="guarda nelle FAQ" />
           </p>
         </div>
       </form>
