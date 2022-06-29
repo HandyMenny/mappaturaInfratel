@@ -80,9 +80,6 @@ const Modal =
                 <br />Se non sei incluso nel Piano Italia 1 Giga controlla i risultati della consultazione 2021, probabilmente avrai copertura FTTH da un privato.
                 <br />I civici oggetto di intervento pubblico diretto o a concessione nell&apos;ambito del piano BUL non possono essere inclusi nel Piano Italia 1 Giga.
               </Question>
-              <Question text="Cosa significa vincitore non ancora noto?">
-                Che il corrispondente lotto del Piano Italia 1 Giga non è stato ancora assegnato o non ne si conosce il vincitore.
-              </Question>
               <Question text="La mia città è inclusa nel piano di coinvestimento Fibercop, ma il vincitore del Piano Italia 1 Giga è OpenFiber, c&apos;è qualche problema?">
                 Non c&apos;è nessun problema, fortunatamente in Italia c&apos;è ancora un minimo di concorrenza e di conseguenza i lotti non sono stati assegnati ad un&apos;unica azienda.
                 <br />Inoltre Fibercop non aveva espresso l&apos;intenzione di coprirti con una rete VHCN, quindi non c&apos;è nulla di sbagliato se lo stato incarica qualcun altro.

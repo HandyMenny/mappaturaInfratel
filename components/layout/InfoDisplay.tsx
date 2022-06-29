@@ -213,7 +213,7 @@ const InfoDisplay = ({ data }: Props) => {
     {!!data.bando1Giga && (
       <SubSectionTitle text="Vincitore Bando">
         <div>
-          { data.bando1Giga == 1 ? ' Openfiber' : data.bando1Giga == 2 ? ' TIM' : ' Non ancora noto' }
+          { data.bando1Giga == 1 ? ' Openfiber' : ' TIM' }
         </div>
       </SubSectionTitle>
     )}
