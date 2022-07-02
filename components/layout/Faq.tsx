@@ -76,7 +76,7 @@ const Modal =
                 Il Piano Italia 1 Giga, precedentemente noto come piano aree grigie, è un piano per portare una connessione VHCN, tramite finanziamento misto pubblico-privato, ai civici che nel 2026 non ne avranno una (da operatori privati) e che non sono stati oggetto di interventi diretti o a concessione nell&apos;ambito del piano BUL.
               </Question>
               <Question text="Cosa significa che un indirizzo è incluso nel Piano Italia 1 Giga?">
-                Che quell&apos;indirizzo verrà presumbilmente coperto (dal vincitore del bando) entro il 2026 con una connessione (cablata o wireless) in grado di fornire, in tipiche condizioni di picco di traffico, almeno 1 Gbps in download e almeno 200 Mbps in upload al primo peering point.
+                Che quell&apos;indirizzo verrà presumibilmente coperto (dal vincitore del bando) entro il 2026 con una connessione (cablata o wireless) in grado di fornire, in tipiche condizioni di picco di traffico, almeno 1 Gbps in download e almeno 200 Mbps in upload al primo peering point.
                 <br />Se non sei incluso nel Piano Italia 1 Giga controlla i risultati della consultazione 2021, probabilmente avrai copertura FTTH da un privato.
                 <br />I civici oggetto di intervento pubblico diretto o a concessione nell&apos;ambito del piano BUL non possono essere inclusi nel Piano Italia 1 Giga.
               </Question>
