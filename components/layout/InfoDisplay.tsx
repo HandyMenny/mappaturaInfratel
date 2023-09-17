@@ -101,7 +101,7 @@ const InfoDisplay = ({ data }: Props) => {
         <SectionContainer>
           <SectionTitle text="Consultazione 2021"/>
           {data.color != null && (
-          <SubSectionTitle text="Colore del civico">
+          <SubSectionTitle text="Colore civico 2026">
             <div className="text-center">
               <div className={`text-3xl sm:text-4xl py-3 px-4 m-auto w-[calc(100%_-_2.9rem)] border-2 ${
                 colorMapping[data.color].className
@@ -111,12 +111,12 @@ const InfoDisplay = ({ data }: Props) => {
             </div>
           </SubSectionTitle>
           )}
-          <SubSectionTitle text="Velocità massima">
+          <SubSectionTitle text="Velocità massima 2026">
             <div>
             {data.color != null ? peakSpeedMapping[data.below300Mbps] : peakSpeedMappingB[data.below300Mbps]}
             </div>
           </SubSectionTitle>
-          <SubSectionTitle text="Velocità ore di punta">
+          <SubSectionTitle text="Velocità ore di punta 2026">
             <div>
               {data.color != null ? peakSpeedMapping[data.peakSpeed] : peakSpeedMappingB[data.peakSpeed]}
             </div>
