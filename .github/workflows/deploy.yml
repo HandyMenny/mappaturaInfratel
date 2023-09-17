@@ -10,7 +10,8 @@ on:
 jobs:
   deployment:
     runs-on: ubuntu-latest
-
+    permissions:
+      contents: write
     strategy:
       matrix:
         node-version: [16.x]
