@@ -95,30 +95,30 @@ const InfoDisplay = ({ data }: Props) => {
         <SubSectionTitle text="Non censito"/>
       </SectionContainer>
   )
-  if (data.below300Mbps != null) {
+  if (data.below300Mbps_2021 != null) {
     consultazione2021 = (
         <>
         <SectionContainer>
           <SectionTitle text="Consultazione 2021"/>
-          {data.color != null && (
+          {data.color_2021 != null && (
           <SubSectionTitle text="Colore civico 2026">
             <div className="text-center">
               <div className={`text-3xl sm:text-4xl py-3 px-4 m-auto w-[calc(100%_-_2.9rem)] border-2 ${
-                colorMapping[data.color].className
+                colorMapping[data.color_2021].className
               }`}>
-                {colorMapping[data.color].text.toUpperCase()}
+                {colorMapping[data.color_2021].text.toUpperCase()}
               </div>
             </div>
           </SubSectionTitle>
           )}
           <SubSectionTitle text="Velocità massima 2026">
             <div>
-            {data.color != null ? peakSpeedMapping[data.below300Mbps] : peakSpeedMappingB[data.below300Mbps]}
+            {data.color_2021 != null ? peakSpeedMapping[data.below300Mbps_2021] : peakSpeedMappingB[data.below300Mbps_2021]}
             </div>
           </SubSectionTitle>
           <SubSectionTitle text="Velocità ore di punta 2026">
             <div>
-              {data.color != null ? peakSpeedMapping[data.peakSpeed] : peakSpeedMappingB[data.peakSpeed]}
+              {data.color_2021 != null ? peakSpeedMapping[data.peakSpeed_2021] : peakSpeedMappingB[data.peakSpeed_2021]}
             </div>
           </SubSectionTitle>
         </SectionContainer>
@@ -132,28 +132,28 @@ const InfoDisplay = ({ data }: Props) => {
         <SubSectionTitle text="Non censito"/>
       </SectionContainer>
   )
-  if(data.class19 != null) {
+  if(data.class19_2020 != null) {
     consultazione2020 = (
         <SectionContainer>
           <SectionTitle text="Consultazione 2020"/>
           <SubSectionTitle text="Copertura 2019">
             <div
                 className={`text-2xl sm:text-3xl py-3 px-4 m-auto w-[calc(100%_-_2.9rem)] border-2 ${
-                    colorMapping[data.class19[0] || ''].className
+                    colorMapping[data.class19_2020[0] || ''].className
                 }`}
             >
-            {colorMapping[data.class19[0] || ''].text.toUpperCase()}{data.class19[1] == 'v' ? ' VHCN' : (data.class19[1] == 'n' || data.class19[0] == 'n') ? ' NGA' : ''}{
-              data.class19[2] == 'r' ? ' RAME' : data.class19[2] == 'w' ? ' FWA' : data.class19[2] == 'f' ? ' FTTH' : ''}
+            {colorMapping[data.class19_2020[0] || ''].text.toUpperCase()}{data.class19_2020[1] == 'v' ? ' VHCN' : (data.class19_2020[1] == 'n' || data.class19_2020[0] == 'n') ? ' NGA' : ''}{
+              data.class19_2020[2] == 'r' ? ' RAME' : data.class19_2020[2] == 'w' ? ' FWA' : data.class19_2020[2] == 'f' ? ' FTTH' : ''}
           </div>
           </SubSectionTitle>
           <SubSectionTitle text="Copertura 2022">
             <div
                 className={`text-2xl sm:text-3xl py-3 px-4 m-auto w-[calc(100%_-_2.9rem)] border-2 ${
-                    colorMapping[data.class22[0] || ''].className
+                    colorMapping[data.class22_2020[0] || ''].className
                 }`}
             >
-              {colorMapping[data.class22[0] || ''].text.toUpperCase()}{data.class22[1] == 'v' ? ' VHCN' : (data.class22[1] == 'n' || data.class22[0] == 'n') ? ' NGA' : ''}{
-              data.class22[2] == 'r' ? ' RAME' : data.class22[2] == 'w' ? ' FWA' : data.class22[2] == 'f' ? ' FTTH' : ''}
+              {colorMapping[data.class22_2020[0] || ''].text.toUpperCase()}{data.class22_2020[1] == 'v' ? ' VHCN' : (data.class22_2020[1] == 'n' || data.class22_2020[0] == 'n') ? ' NGA' : ''}{
+              data.class22_2020[2] == 'r' ? ' RAME' : data.class22_2020[2] == 'w' ? ' FWA' : data.class22_2020[2] == 'f' ? ' FTTH' : ''}
             </div>
           </SubSectionTitle>
         </SectionContainer>
@@ -166,18 +166,18 @@ const InfoDisplay = ({ data }: Props) => {
         <SubSectionTitle text="Non censito"/>
       </SectionContainer>
   )
-  if(data.cat18 != null) {
+  if(data.cat18_2019 != null) {
     consultazione2019 = (
         <SectionContainer>
           <SectionTitle text="Consultazione 2019"/>
           <SubSectionTitle text="Velocità massima 2018">
             <div>
-              {peakSpeedMapping2017[data.cat18]}
+              {peakSpeedMapping2017[data.cat18_2019]}
             </div>
           </SubSectionTitle>
           <SubSectionTitle text="Velocità massima 2021">
             <div>
-              {peakSpeedMapping2017[data.cat21]}
+              {peakSpeedMapping2017[data.cat21_2019]}
             </div>
           </SubSectionTitle>
         </SectionContainer>
@@ -190,13 +190,13 @@ const InfoDisplay = ({ data }: Props) => {
         <SubSectionTitle text="Non censito"/>
       </SectionContainer>
   )
-  if(data.speed20 != null) {
+  if(data.speed20_2017 != null) {
     consultazione2017 = (
         <SectionContainer>
           <SectionTitle text="Consultazione 2017" />
           <SubSectionTitle text="Velocità massima 2020">
             <div>
-              {peakSpeedMapping2017[data.speed20]}
+              {peakSpeedMapping2017[data.speed20_2017]}
             </div>
           </SubSectionTitle>
         </SectionContainer>
@@ -207,13 +207,13 @@ const InfoDisplay = ({ data }: Props) => {
     <SectionTitle text="Piano Italia 1 Giga" />
     <SubSectionTitle text="Incluso nel bando">
       <div>
-        {data.bando1Giga ? 'Sì' : 'No'}
+        {data.status_p1g ? 'Sì' : 'No'}
       </div>
     </SubSectionTitle>
-    {!!data.bando1Giga && (
+    {!!data.status_p1g && (
       <SubSectionTitle text="Vincitore Bando">
         <div>
-          { data.bando1Giga == 1 ? ' Openfiber' : ' TIM' }
+          { data.status_p1g == 1 ? ' Openfiber' : ' TIM' }
         </div>
       </SubSectionTitle>
     )}
