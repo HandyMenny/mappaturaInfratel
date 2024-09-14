@@ -50,6 +50,15 @@ const peakSpeedMapping2017: { [key: number]: string } = {
   100: ">= 100 Mbit/s"
 };
 
+const connettiMapping: { [key: number]: string } = {
+  0: "",
+  1: "Esistente",
+  2: "Inesistente",
+  3: "Escluso no UI",
+  4: "Escluso residuale",
+  5: "Escluso già coperto"
+};
+
 const SectionTitle = ({
   text,
   children,
@@ -214,6 +223,13 @@ const InfoDisplay = ({ data }: Props) => {
       <SubSectionTitle text="Vincitore Bando">
         <div>
           { data.status_p1g == 1 ? ' Openfiber' : ' TIM' }
+        </div>
+      </SubSectionTitle>
+    )}
+    {!!data.status_p1g && !!data.walkin_connetti && (
+      <SubSectionTitle text="Esito Walk in">
+        <div>
+          {connettiMapping[data.walkin_connetti]}
         </div>
       </SubSectionTitle>
     )}
