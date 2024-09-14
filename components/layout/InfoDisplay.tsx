@@ -59,6 +59,19 @@ const connettiMapping: { [key: number]: string } = {
   5: "Escluso già coperto"
 };
 
+const p1gStatusMapping: { [key: number]: string } = {
+  0: "No",
+  1: "Sì",
+  2: "Sì",
+  3: "Potenziale civico di prossimità"
+};
+
+const p1gWinnerMapping: { [key: number]: string } = {
+  1: "Operfiber",
+  2: "Fibercop",
+  3: "Openfiber"
+}
+
 const SectionTitle = ({
   text,
   children,
@@ -216,13 +229,13 @@ const InfoDisplay = ({ data }: Props) => {
     <SectionTitle text="Piano Italia 1 Giga" />
     <SubSectionTitle text="Incluso nel bando">
       <div>
-        {data.status_p1g ? 'Sì' : 'No'}
+        {p1gStatusMapping[data.status_p1g]}
       </div>
     </SubSectionTitle>
     {!!data.status_p1g && (
       <SubSectionTitle text="Vincitore Bando">
         <div>
-          { data.status_p1g == 1 ? ' Openfiber' : ' TIM' }
+          {p1gWinnerMapping[data.status_p1g]}
         </div>
       </SubSectionTitle>
     )}
