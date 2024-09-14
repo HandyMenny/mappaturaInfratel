@@ -257,11 +257,10 @@ const InfoDisplay = ({ data }: Props) => {
       {consultazione2017}
       <div className="text-center w-full">
         <p>
-          Dubbi? <Faq buttonClassName = "font-semibold !text-base !text-indigo-50" buttonText="Dai un'occhiata alle FAQ" /> o alla  <ExternalLink
-          href="https://fibra.click"
-          text="wiki di FibraClick"
-          className="font-semibold !text-base !text-indigo-50"
-        />
+          Dubbi? <Faq buttonClassName = "font-semibold !text-base !text-indigo-50" buttonText="Dai un'occhiata alle FAQ" />
+        </p>
+        <p>
+          Puoi trovare ulteriori informazioni sui portali <ExternalLink  className = "font-semibold !text-base !text-indigo-50" text = "Connetti Italia" href = "https://connetti.italia.it/"/> e <ExternalLink  className = "font-semibold !text-base !text-indigo-50" text = "Banda Ultralarga" href = "https://bandaultralarga.italia.it/"/>
         </p>
       </div>
     </div>
