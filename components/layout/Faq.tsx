@@ -72,6 +72,19 @@ const Modal =
                 Perché nei dati pubblicati da Infratel sono presenti con la stessa denominazione, ma con identificativo diverso.
                 In caso di civici duplicati l&apos;esponente è utilizzato per numerarli.
               </Question>
+              <Question text="Cosa significa potenziale civico di prossimità?">
+                Il 6 settembre 2024 Infratel ha messo a consultazione un elenco di civici vicini (<i>di prossimità</i>) a civici inclusi nel Piano Italia 1 Giga, questi civici potrebbero sostituire civici presenti nel piano ma più difficili da coprire.<br/>
+                Quella dicitura sta ad indicare che il civico è presente in questa consultazione. 
+              </Question>
+              <Question text="Come interpreto lo stato esito walk in?">
+                A valle delle assegnazioni del Piano Italia 1 Giga, i vincitori hanno dovuto verificare sul campo (walk in) che i civici inclusi nel piano avessero tutte le carte in regola per poter essere coperti.<br/>
+                Gli esiti possibili sono:<br/>
+                <b>Esistente</b>: il civico può essere coperto dal Piano Italia 1 Giga<br/>
+                <b>Inesistente</b>: il civico non esiste o non è stato riscontrato sul campo<br/>
+                <b>Escluso no UI</b>: il civico è stato escluso perché privo di unità abitative<br/>
+                <b>Escluso residuale</b>: il civico è stato escluso perché in un aggregato spaziale di 100 metri fa parte del &lt; 10% dei civici non coperti da reti VHCN<br/>
+                <b>Escluso già coperto</b>: il civico è stato escluso perché è già coperto da una rete VHCN
+              </Question>
               <Question text="Cos&apos;è il Piano Italia 1 Giga?">
                 Il Piano Italia 1 Giga, precedentemente noto come piano aree grigie, è un piano per portare una connessione VHCN, tramite finanziamento misto pubblico-privato, ai civici che nel 2026 non ne avranno una (da operatori privati) e che non sono stati oggetto di interventi diretti o a concessione nell&apos;ambito del piano BUL.
               </Question>
