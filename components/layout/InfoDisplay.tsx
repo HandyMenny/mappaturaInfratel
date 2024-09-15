@@ -51,12 +51,20 @@ const peakSpeedMapping2017: { [key: number]: string } = {
 };
 
 const connettiMapping: { [key: number]: string } = {
-  0: "",
-  1: "Esistente",
+  // history
+  0: "Ignoto",
+  1: "Ignoto", // Esistente in history = Ignoto in current
   2: "Inesistente",
   3: "Escluso no UI",
   4: "Escluso residuale",
-  5: "Escluso già coperto"
+  5: "Escluso già coperto",
+  // current
+  10: "Ignoto",
+  11: "Esistente",
+  12: "Inesistente",
+  13: "Escluso no UI",
+  14: "Escluso residuale",
+  15: "Escluso già coperto"
 };
 
 const p1gStatusMapping: { [key: number]: string } = {
