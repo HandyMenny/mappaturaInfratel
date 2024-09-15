@@ -83,7 +83,8 @@ const Modal =
                 <b>Inesistente</b>: il civico non esiste o non è stato riscontrato sul campo<br/>
                 <b>Escluso no UI</b>: il civico è stato escluso perché privo di unità abitative<br/>
                 <b>Escluso residuale</b>: il civico è stato escluso perché in un aggregato spaziale di 100 metri fa parte del &lt; 10% dei civici non coperti da reti VHCN<br/>
-                <b>Escluso già coperto</b>: il civico è stato escluso perché è già coperto da una rete VHCN
+                <b>Escluso già coperto</b>: il civico è stato escluso perché è già coperto da una rete VHCN<br/>
+                <b>Ignoto</b>: Esito non noto, probabilmente il civico è stato escluso dal piano ma il motivo non è noto
               </Question>
               <Question text="Cos&apos;è il Piano Italia 1 Giga?">
                 Il Piano Italia 1 Giga, precedentemente noto come piano aree grigie, è un piano per portare una connessione VHCN, tramite finanziamento misto pubblico-privato, ai civici che nel 2026 non ne avranno una (da operatori privati) e che non sono stati oggetto di interventi diretti o a concessione nell&apos;ambito del piano BUL.
