@@ -67,7 +67,7 @@ const p1gStatusMapping: { [key: number]: string } = {
 };
 
 const p1gWinnerMapping: { [key: number]: string } = {
-  1: "Operfiber",
+  1: "Openfiber",
   2: "Fibercop",
   3: "Openfiber"
 }
