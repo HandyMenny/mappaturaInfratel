@@ -72,9 +72,16 @@ const Modal =
                 Perché nei dati pubblicati da Infratel sono presenti con la stessa denominazione, ma con identificativo diverso.
                 In caso di civici duplicati l&apos;esponente è utilizzato per numerarli.
               </Question>
-              <Question text="Cosa significa potenziale civico di prossimità?">
-                Il 6 settembre 2024 Infratel ha messo a consultazione un elenco di civici vicini (<i>di prossimità</i>) a civici inclusi nel Piano Italia 1 Giga, questi civici potrebbero sostituire civici presenti nel piano ma più difficili da coprire.<br/>
-                Quella dicitura sta ad indicare che il civico è presente in questa consultazione. 
+              <Question text="Cosa è un civico di prossimità ammissibile?">
+                Il 6 settembre 2024 Infratel ha messo a consultazione un elenco di civici vicini (<i>di prossimità</i>) a civici inclusi nel Piano Italia 1 Giga, i cui risultati sono stati pubblicati 28 Ottobre 2024.<br/>
+                La dicitura sta ad indicare che il civico è risultato un <i>civico di prossimità ammissibile</i> all&apos;esito di questa consultazione.<br/>           
+                I criteri di ammissibilità sono:<br/>
+                <ul className="list-disc pl-6">
+                  <li>Stesso odonimo (via) o distanza ≤ 300 metri da un civico a bando.</li>
+                  <li>Non interessato da piani privati con copertura ≥ 300Mbps entro il 30/06/2026.</li>
+                  <li>Distanza ≥ 50 metri da un civico a bando.</li>
+                  <li>Distanza ≥ 50 metri da un civico che sulla broadbandmap risulti coperto da una rete ≥ 300Mbps.</li> 
+                </ul>
               </Question>
               <Question text="Come interpreto lo stato esito walk in?">
                 A valle delle assegnazioni del Piano Italia 1 Giga, i vincitori hanno dovuto verificare sul campo (walk in) che i civici inclusi nel piano avessero tutte le carte in regola per poter essere coperti.<br/>
@@ -91,7 +98,7 @@ const Modal =
               </Question>
               <Question text="Cosa significa che un indirizzo è incluso nel Piano Italia 1 Giga?">
                 Che quell&apos;indirizzo verrà presumibilmente coperto (dal vincitore del bando) entro il 2026 con una connessione (cablata o wireless) in grado di fornire, in tipiche condizioni di picco di traffico, almeno 1 Gbps in download e almeno 200 Mbps in upload al primo peering point.
-                <br />Se non sei incluso nel Piano Italia 1 Giga controlla i risultati della consultazione 2021, probabilmente avrai copertura FTTH da un privato.
+                <br />Se non sei incluso nel Piano Italia 1 Giga controlla i risultati della consultazioni 2021/24, probabilmente avrai copertura FTTH da un privato.
                 <br />I civici oggetto di intervento pubblico diretto o a concessione nell&apos;ambito del piano BUL non possono essere inclusi nel Piano Italia 1 Giga.
               </Question>
               <Question text="La mia città è inclusa nel piano di coinvestimento Fibercop, ma il vincitore del Piano Italia 1 Giga è OpenFiber, c&apos;è qualche problema?">
@@ -115,7 +122,7 @@ const Modal =
               <Question text="Perché il mio indirizzo è non censito in quasi tutte le consultazioni?">
                 Gli indirizzi di Calabria, Puglia e Sardegna che risultano solo nella consultazione 2017, sono molto probabilmente indirizzi dichiarati bianchi nel 2015-17 ed oggetto di intervento pubblico diretto o a concessione nell&apos;ambito del piano BUL.
                 <br />Gli indirizzi di Calabria, Puglia e Sardegna che risultano esclusivamente nella consultazione 2017 e in quella 2021, sono molto probabilmente indirizzi dichiarati bianchi nel 2015-17 ma esclusi da interventi pubblici a concessione o diretti del Piano BUL.
-                <br />Gli indirizzi che figurano solo nella consultazione 2021 sono molto probabilmente indirizzi che non esistevano o erano dichiarati bianchi nel 2015-17 e esclusi da interventi pubblici a concessione o diretti del Piano BUL.
+                <br />Gli indirizzi che figurano solo nelle consultazioni 2021/24 sono molto probabilmente indirizzi che non esistevano o erano dichiarati bianchi nel 2015-17 e esclusi da interventi pubblici a concessione o diretti del Piano BUL.
               </Question>
               <Question text="Cosa rappresenta il colore del civico?">
                 Il colore del civico è un modo per indicare quanto è redditizio per gli operatori privati quel civico.
