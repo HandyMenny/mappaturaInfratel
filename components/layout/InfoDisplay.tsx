@@ -71,13 +71,15 @@ const p1gStatusMapping: { [key: number]: string } = {
   0: "No",
   1: "Sì",
   2: "Sì",
-  3: "Potenziale civico di prossimità"
+  3: "Civico di prossimità ammissibile",
+  4: "No", // civico di prossimità non ammissibile
 };
 
 const p1gWinnerMapping: { [key: number]: string } = {
   1: "Openfiber",
   2: "Fibercop",
-  3: "Openfiber"
+  3: "Openfiber",
+  4: "Openfiber",
 }
 
 const SectionTitle = ({
@@ -121,10 +123,26 @@ const InfoDisplay = ({ data }: Props) => {
 
   let consultazione2021 = (
       <SectionContainer>
-        <SectionTitle text="Consultazione 2021"/>
+        <SectionTitle text="Consultazioni 2021-24"/>
         <SubSectionTitle text="Non censito"/>
       </SectionContainer>
   )
+  
+  // recyles consultazione2021 for 2024
+  if (data.below300Mbps_2024 != null) {
+    consultazione2021 = (
+        <>
+        <SectionContainer>
+          <SectionTitle text="Consultazione 2024"/>
+          <SubSectionTitle text="Velocità ore di punta 2026">
+            <div>{peakSpeedMappingB[data.below300Mbps_2024]}</div>
+          </SubSectionTitle>
+        </SectionContainer>
+        </>
+    )
+  }
+
+
   if (data.below300Mbps_2021 != null) {
     consultazione2021 = (
         <>
@@ -240,7 +258,7 @@ const InfoDisplay = ({ data }: Props) => {
         {p1gStatusMapping[data.status_p1g]}
       </div>
     </SubSectionTitle>
-    {!!data.status_p1g && (
+    {!!data.status_p1g && data.status_p1g != 4 && (
       <SubSectionTitle text="Vincitore Bando">
         <div>
           {p1gWinnerMapping[data.status_p1g]}

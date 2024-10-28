@@ -5,6 +5,7 @@ export interface EgonData {
   number: string;
   status_p1g: number;
   walkin_connetti: number;
+  below300Mbps_2024: number;
   color_2021: string;
   peakSpeed_2021: number;
   below300Mbps_2021: number;
